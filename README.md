@@ -1,6 +1,6 @@
 # TermiNetworkBackend
 
-This is sample backend application made to the TermiNetwork swift library
+A sample backend application made to test the TermiNetwork swift library
 
 ## API Calls
 
