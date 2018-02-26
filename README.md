@@ -2,6 +2,17 @@
 
 A sample backend application made to test the TermiNetwork swift library
 
+## Instalation
+
+Clone the project from GitHub and run the following commands to run the server
+
+```
+$ git clone https://github.com/billp/TermiNetworkBackend
+$ cd TermiNetworkBackend
+$ bundle
+$ rails s
+```
+
 ## API Calls
 
 ### /test_params
