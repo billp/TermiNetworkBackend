@@ -2,7 +2,7 @@
 
 A sample backend application made to test the TermiNetwork swift library
 
-## Instalation
+## Installation
 
 Clone the project from GitHub and run the following commands to run the server
 
