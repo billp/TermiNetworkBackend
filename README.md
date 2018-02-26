@@ -35,7 +35,7 @@ Response
 ```
 
 ### /test_status_code
-> Used to test http status code. It returns the given status code in JSON and as actual HTTP STATUS CODE.
+> Used to test http status code. It returns the given status code in JSON as well as actual HTTP STATUS CODE.
 
 #### Methods: GET
 
