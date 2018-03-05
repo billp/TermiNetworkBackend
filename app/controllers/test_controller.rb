@@ -1,6 +1,6 @@
 class TestController < ApplicationController
 	def test_params
-		render json: params
+		render json: params.except(:controller, :action)
 	end
 
 	def test_status_code
@@ -8,6 +8,6 @@ class TestController < ApplicationController
 	end
 
 	def test_headers
-		render json: request.env.select { |k,v| k.match("^HTTP.*|^CONTENT.*|^REMOTE.*|^REQUEST.*|^AUTHORIZATION.*|^SCRIPT.*|^SERVER.*") }
+		render json: request.env.select { |k,v| k.match("^HTTP_.*") }
 	end
 end
