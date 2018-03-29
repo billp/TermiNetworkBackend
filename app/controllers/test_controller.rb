@@ -10,4 +10,8 @@ class TestController < ApplicationController
 	def test_headers
 		render json: request.env.select { |k,v| k.match("^HTTP_.*") }
 	end
+
+	def test_empty_response
+		head :ok, content_type: 'text/html'
+	end
 end

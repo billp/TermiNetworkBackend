@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   match '/test_params', to: 'test#test_params', via: [:get, :post, :delete]
   match '/test_status_code', to: 'test#test_status_code', via: [:get]
   match '/test_headers', to: 'test#test_headers', via: [:get]
+  match '/test_empty_response', to: 'test#test_empty_response', via: [:get, :post]
   post '/upload_file', to: 'attachments#upload'
 end
