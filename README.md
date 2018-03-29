@@ -84,3 +84,15 @@ Response
     "success": true
 }
 ```
+
+### /test_empty_response
+> A simple call that returns an empty body.
+
+#### Methods: GET|POST
+
+Example call
+```
+http://localhost:3000/test_empty_response
+```
+
+Response: **nothing**
