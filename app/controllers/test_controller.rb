@@ -14,4 +14,8 @@ class TestController < ApplicationController
 	def test_empty_response
 		head :ok, content_type: 'text/html'
 	end
+
+	def test_json_params
+		render json: params
+	end
 end
