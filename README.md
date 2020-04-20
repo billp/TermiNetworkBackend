@@ -96,3 +96,27 @@ http://localhost:3000/test_empty_response
 ```
 
 Response: **nothing**
+
+Response
+```json
+{
+    "success": true
+}
+```
+
+### /test_encrypt_params
+> Returns the params passed encrypted with AES256 CBC. The key is aaaaaaaaaaaaaaaaaaaaaaabcdefg123
+
+#### Methods: GET|POST
+
+Example call
+```
+http://localhost:3000/test_encrypt_params?test=abc
+```
+
+Response
+```json
+{
+  "data": "/d0/tEv1pAoZaijl1quH2xdR5mP1yKSP8OXL0QGILydGSi7c98spSdqFft00I5UW0oqR9401gRAS40QyleoNqC+ZxFpVnixkrUFlo1OOJPGkzZDp2gCR/2K3CpHZ620c"
+}
+```
