@@ -25,8 +25,7 @@ class TestController < ApplicationController
 
 	private
 		def aes256_encrypt(key, data)
-			aes = OpenSSL::Cipher.new('AES-256-CBC')
-			puts Base64.encode64(key)
+			aes = OpenSSL::Cipher.new('AES-256-ECB')
 
 			aes.encrypt
 			aes.key = key
@@ -35,7 +34,7 @@ class TestController < ApplicationController
 
 		def aes256_decrypt(key, data)
 		  key = Digest::SHA256.digest(key) if(key.kind_of?(String) && 32 != key.bytesize)
-		  aes = OpenSSL::Cipher.new('AES-256-CBC')
+			aes = OpenSSL::Cipher.new('AES-256-ECB')
 		  aes.decrypt
 		  aes.key = Digest::SHA256.digest(key)
 		  aes.update(data) + aes.final
