@@ -20,7 +20,7 @@ class TestController < ApplicationController
 	end
 
 	def test_encrypt_params
-		render json: { data: Base64.strict_encode64(aes256_encrypt("aaaaaaaaaaaaaaaaaaaaaaabcdefg123", params.to_s)) }
+		render json: { data: Base64.strict_encode64(aes256_encrypt("aaaaaaaaaaaaaaaaaaaaaaabcdefg123", params.to_json)) }
 	end
 
 	private

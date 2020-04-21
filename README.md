@@ -105,7 +105,7 @@ Response
 ```
 
 ### /test_encrypt_params
-> Returns the params passed encrypted with AES256 CBC. The key is aaaaaaaaaaaaaaaaaaaaaaabcdefg123
+> Returns the params passed encrypted with AES256 ECB. The key is aaaaaaaaaaaaaaaaaaaaaaabcdefg123
 
 #### Methods: GET|POST
 
