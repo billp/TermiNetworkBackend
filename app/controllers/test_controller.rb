@@ -21,10 +21,8 @@ class TestController < ApplicationController
 
 	def test_encrypt_params
 		key = "aaaaaaaaaaaaaaaaaaaaaaabcdefg123"
-		byebug
-		puts params[:data]
-		decrypted_json = aes256_decrypt(key, Base64.strict_decode64(params[:data])).to_json
-		render json: { data: Base64.strict_encode64(aes256_encrypt(decrypted_json)) }
+		decrypted_json = JSON.parse(aes256_decrypt(key, Base64.strict_decode64(params[:data])))
+		render json: { data: Base64.strict_encode64(aes256_encrypt(key, decrypted_json.to_json)) }
 	end
 
 	private
@@ -40,7 +38,7 @@ class TestController < ApplicationController
 		  key = Digest::SHA256.digest(key) if(key.kind_of?(String) && 32 != key.bytesize)
 			aes = OpenSSL::Cipher.new('AES-256-ECB')
 		  aes.decrypt
-		  aes.key = Digest::SHA256.digest(key)
+		  aes.key = key
 		  aes.update(data) + aes.final
 		end
 end
