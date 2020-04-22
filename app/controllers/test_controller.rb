@@ -20,7 +20,11 @@ class TestController < ApplicationController
 	end
 
 	def test_encrypt_params
-		render json: { data: Base64.strict_encode64(aes256_encrypt("aaaaaaaaaaaaaaaaaaaaaaabcdefg123", params.to_json)) }
+		key = "aaaaaaaaaaaaaaaaaaaaaaabcdefg123"
+		byebug
+		puts params[:data]
+		decrypted_json = aes256_decrypt(key, Base64.strict_decode64(params[:data])).to_json
+		render json: { data: Base64.strict_encode64(aes256_encrypt(decrypted_json)) }
 	end
 
 	private
