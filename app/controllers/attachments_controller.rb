@@ -1,8 +1,8 @@
 class AttachmentsController < ApplicationController
 	def upload
-	  attachment = Attachment.new
-		attachment.file.attach(attachment_params)
-	  attachment.file.purge
+	  product = Product.new
+		product.file.attach(attachment_params)
+	  product.file.purge
 
 	  render json: { "success": true }
 	end
