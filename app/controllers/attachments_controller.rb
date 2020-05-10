@@ -1,7 +1,8 @@
 class AttachmentsController < ApplicationController
 	def upload
-	  attachment = Attachment.create(attachment_params)
-	  attachment.destroy
+	  attachment = Attachment.new
+		attachment.file.attach(attachment_params)
+	  attachment.file.purge
 
 	  render json: { "success": true }
 	end
@@ -10,6 +11,6 @@ class AttachmentsController < ApplicationController
 	private
 
 	def attachment_params
-		params.require(:file).permit(:attachment)
+		params.require(:file)
 	end
 end
