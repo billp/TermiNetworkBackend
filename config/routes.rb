@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  scope defaults: { format: :json} do
+    get 'cities', to: 'cities#index'
+    get 'city/:id', to: 'cities#show'
+  end
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   match '/test_params', to: 'test#test_params', via: [:get, :post, :delete]
   match '/test_status_code', to: 'test#test_status_code', via: [:get]
