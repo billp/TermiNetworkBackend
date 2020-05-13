@@ -19,7 +19,7 @@ athens = City.create(name: "Athens",
                      description: "Athens is the historical capital of Europe, with a long history, dating from the first settlement in the Neolithic age. In the 5th Century BC (the “Golden Age of Pericles”) – the culmination of Athens’ long, fascinating history – the city’s values and civilization acquired a universal significance. Over the years, a multitude of conquerors occupied Athens, and erected unique, splendid monuments - a rare historical palimpsest. In 1834, it became the capital of the modern Greek state and in two centuries since it has become an attractive modern metropolis with unrivalled charm.")
 athens.image.attach(
  io: File.open(Rails.root.join('db', 'seeds', 'images', 'athens.jpeg')),
- filename: 'paris.jpg'
+ filename: 'athens.jpg'
 )
 #--
 yokohama = City.create(name: "Yokohama",
@@ -27,5 +27,13 @@ yokohama = City.create(name: "Yokohama",
                         description: "Yokohama, city and port, capital of Kanagawa ken (prefecture), east-central Honshu, Japan. The second most populous city in the country, it is a major component of the Tokyo-Yokohama metropolitan area, the largest urban agglomeration in Japan.")
 yokohama.image.attach(
   io: File.open(Rails.root.join('db', 'seeds', 'images', 'yokohama.jpeg')),
-  filename: 'paris.jpg'
+  filename: 'yokohama.jpg'
+)
+#--
+cairo = City.create(name: "Cairo",
+                    country_name: "Egypt",
+                    description: "Cairo, Arabic Al-Qāhirah (“The Victorious”), city, capital of Egypt, and one of the largest cities in Africa. Cairo has stood for more than 1,000 years on the same site on the banks of the Nile, primarily on the eastern shore, some 500 miles (800 km) downstream from the Aswān High Dam. Located in the northeast of the country, Cairo is the gateway to the Nile delta, where the lower Nile separates into the Rosetta and Damietta branches. Metropolitan Cairo is made up of the Cairo muḥāfazah (governorate), as well as other districts, some of which belong to neighbouring governorates such as Al-Jīzah and Qalūbiyyah. Area governorate, 83 square miles (214 square km). Pop. (2006) governorate, 7,786,640; (2005 est.) urban agglom., 11,128,000..")
+cairo.image.attach(
+  io: File.open(Rails.root.join('db', 'seeds', 'images', 'cairo.jpeg')),
+  filename: 'cairo.jpeg'
 )
