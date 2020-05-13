@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/viniciusalonso/activestorage-dropbox.git
+  revision: 0ba33fd278cf1ef64fff883cff27d0f86e96a30b
+  ref: 0ba33fd278cf1ef64fff883cff27d0f86e96a30b
+  specs:
+    activestorage-dropbox (1.0.0)
+      dropbox_api (~> 0.1.18)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,8 +76,13 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
+    dropbox_api (0.1.18)
+      faraday (<= 1.0)
+      oauth2 (~> 1.1)
     erubi (1.9.0)
     execjs (2.7.0)
+    faraday (1.0.0)
+      multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -78,6 +91,7 @@ GEM
     ipaddr (1.2.2)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
+    jwt (2.2.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -97,9 +111,18 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
+    multi_json (1.14.1)
+    multi_xml (0.6.0)
+    multipart-post (2.1.1)
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    oauth2 (1.4.4)
+      faraday (>= 0.8, < 2.0)
+      jwt (>= 1.0, < 3.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
     openssl (2.1.2)
       ipaddr
     paperclip (5.2.1)
@@ -195,6 +218,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activestorage-dropbox!
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)

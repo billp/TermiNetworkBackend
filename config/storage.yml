@@ -1,3 +1,7 @@
 local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
+
+dropbox:
+  service: Dropbox
+  access_token: <%= ENV["DROPBOX_TERMINETWORK_TOKEN"] %>
