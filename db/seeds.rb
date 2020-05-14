@@ -49,7 +49,7 @@ barcelona.image.attach(
 prague = City.create(name: "Prague",
                      country_name: "Czech Republic",
                      description: "Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock, which gives an animated hourly show. Completed in 1402, pedestrian Charles Bridge is lined with statues of Catholic saints.")
-barcelona.image.attach(
+prague.image.attach(
   io: File.open(Rails.root.join('db', 'seeds', 'images', 'prague.jpeg')),
   filename: 'prague.jpeg'
 )
