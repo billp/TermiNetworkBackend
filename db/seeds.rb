@@ -42,8 +42,8 @@ barcelona = City.create(name: "Barcelona",
                     country_name: "Spain",
                     description: "Barcelona is the capital city of Catalonia, which is a region of Spain. Barcelona is the largest city on the Mediterranean coast. The city is between the rivers of Llobregat and Besòs, and south of the Pyrenees mountains. It has a hot-summer Mediterranean climate (Csa in the Koeppen climate classification). In 1992, Barcelona hosted the Summer Olympic Games. Many new parks were opened and other significant changes to the city were made. One example is opening the new beaches in the Poble Nou area. In 2007, about 1.6 million people lived in Barcelona. Around 3.1 million people live in the Metropolitan Area and 4.9 million people live in the Urban Region. Barcelona is the second most populated city in Spain, and the tenth in the European Union. Barcelona is home to football team F.C. Barcelona.")
 barcelona.image.attach(
-  io: File.open(Rails.root.join('db', 'seeds', 'images', 'barcelona.png')),
-  filename: 'barcelona.png'
+  io: File.open(Rails.root.join('db', 'seeds', 'images', 'barcelona.jpg')),
+  filename: 'barcelona.jpg'
 )
 #--
 prague = City.create(name: "Prague",
