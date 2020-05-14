@@ -37,3 +37,19 @@ cairo.image.attach(
   io: File.open(Rails.root.join('db', 'seeds', 'images', 'cairo.jpeg')),
   filename: 'cairo.jpeg'
 )
+#--
+barcelona = City.create(name: "Barcelona",
+                    country_name: "Spain",
+                    description: "Barcelona is the capital city of Catalonia, which is a region of Spain. Barcelona is the largest city on the Mediterranean coast. The city is between the rivers of Llobregat and Besòs, and south of the Pyrenees mountains. It has a hot-summer Mediterranean climate (Csa in the Koeppen climate classification). In 1992, Barcelona hosted the Summer Olympic Games. Many new parks were opened and other significant changes to the city were made. One example is opening the new beaches in the Poble Nou area. In 2007, about 1.6 million people lived in Barcelona. Around 3.1 million people live in the Metropolitan Area and 4.9 million people live in the Urban Region. Barcelona is the second most populated city in Spain, and the tenth in the European Union. Barcelona is home to football team F.C. Barcelona.")
+barcelona.image.attach(
+  io: File.open(Rails.root.join('db', 'seeds', 'images', 'barcelona.png')),
+  filename: 'barcelona.png'
+)
+#--
+prague = City.create(name: "Prague",
+                     country_name: "Czech Republic",
+                     description: "Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock, which gives an animated hourly show. Completed in 1402, pedestrian Charles Bridge is lined with statues of Catholic saints.")
+barcelona.image.attach(
+  io: File.open(Rails.root.join('db', 'seeds', 'images', 'prague.jpeg')),
+  filename: 'prague.jpeg'
+)
