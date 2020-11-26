@@ -1,10 +1,12 @@
 class AttachmentsController < ApplicationController
 	def upload
 	  product = Product.new
-		product.file.attach(attachment_params)
+    product.file.attach(attachment_params)
+    data = File.read(params["file"].tempfile)
+    checksum = Digest::SHA256.hexdigest(data)
 	  product.file.purge
 
-	  render json: { "success": true }
+	  render json: { "success": true, "checksum": checksum }
 	end
 
 
