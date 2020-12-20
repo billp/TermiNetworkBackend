@@ -6,7 +6,11 @@ class AttachmentsController < ApplicationController
     checksum = Digest::SHA256.hexdigest(data)
 	  product.file.purge
 
-	  render json: { "success": true, "checksum": checksum }
+	  render json: {
+			"success": true, 
+			"checksum": checksum,
+			"param": params["param"]
+		}
 	end
 
 
