@@ -7,9 +7,9 @@ class AttachmentsController < ApplicationController
 	  product.file.purge
 
 	  render json: {
-			"success": true, 
+			"success": true,
 			"checksum": checksum,
-			"param": params["param"]
+			"param": params["test_param"]
 		}
 	end
 
