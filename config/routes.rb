@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   scope defaults: { format: :json} do
     get 'cities', to: 'cities#index'
     get 'city/:id', to: 'cities#show'

@@ -1,9 +1,7 @@
-require 'test_helper'
+require "test_helper"
 
 class AttachmentsControllerTest < ActionDispatch::IntegrationTest
-  test "should get upload" do
-    get attachments_upload_url
-    assert_response :success
-  end
-
+  # test "the truth" do
+  #   assert true
+  # end
 end

@@ -1,5 +1,5 @@
 class TestController < ApplicationController
-	def test_params
+  def test_params
 		render json: params.except(:controller, :action)
 	end
 

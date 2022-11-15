@@ -1,5 +1,5 @@
 class AttachmentsController < ApplicationController
-	def upload
+  def upload
 	  product = Product.new
     product.file.attach(attachment_params)
     data = File.read(params["file"].tempfile)
